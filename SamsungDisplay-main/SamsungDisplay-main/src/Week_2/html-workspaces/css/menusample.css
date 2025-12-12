@@ -1,0 +1,103 @@
+/* 전체 시작 */
+#wrap{
+  position:relative;
+  width:90%;
+  display:grid;
+  grid-template-columns:20% 1fr;
+  grid-template-rows:100px 1fr 100px;
+  height:100%;
+  grid-gap:20px;
+  grid-template-areas:
+    "main_header header"
+    "aside content"
+    "main_footer footer";
+}
+
+/* 전체 끝 */
+
+/* 헤더 시작 */
+#main_header{
+	border: 1px solid #000;
+	grid-area: header;
+}
+
+.header_top_link{
+	position: absolute;
+	top: 30px;
+	top: 1.875rem;
+	right: 30px;
+	right: 1.875rem;
+}
+
+.login_before > ul > li{
+	display: inline-block;
+}
+
+.login_before > ul > li > a{
+	transition: all 0.5s ease;
+}
+
+.login_before > ul > li > a:hover{
+	color: #ccc;
+}
+
+#main_gnb{
+	text-align: center;
+	background-color: #999;
+}
+
+#main_gnb > ul > li{
+		display: inline-block;
+		position: relative;
+}
+
+#main_gnb > ul > li:hover{
+	background-color: black;
+}
+
+#main_gnb > ul > li:hover a{
+	color: #fff;
+}
+
+#main_gnb > ul > li:hover ul{
+	display: block;
+}
+
+#main_gnb > ul > li > a{
+	display: block;
+	padding: 10px 40px;
+	font-weight: 600;
+	color: #fff;
+}
+
+#main_gnb > ul  ul{
+	display: none;
+  position:absolute;
+  left:0;
+  top:45px;
+  width: 100%;
+  background-color:#ccc;
+}
+
+/* 헤더 끝 */
+
+/* 왼쪽 메뉴 시작*/
+#aside{
+	grid-area: aside;
+	border: 1px solid #000;
+}
+/* 왼쪽 메뉴 끝 */
+
+/* 본문 시작 */
+#content{
+	grid-area: content;
+	border: 1px solid #000;
+}
+/* 본문 끝 */
+
+/* 꼬리말 시작 */
+#main_footer{
+	grid-area: footer;
+	border: 1px solid #000;
+}
+/* 꼬리말 끝 */

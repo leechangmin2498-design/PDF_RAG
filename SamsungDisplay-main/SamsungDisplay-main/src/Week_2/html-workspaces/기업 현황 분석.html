@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>레이아웃 메뉴연습</title>
+		<link rel="stylesheet" type="text/css" href="css/menusample.css">
+		<link rel="stylesheet" type="text/css" href="css/Tab.css">
+
+		<script src="js/default.js"></script>
+
+	</head>
+	<body>
+		<div id="wrap">
+			<header id="main_header">
+				<div class="header_school_information">
+					<span class="header_school_mark">
+						<a href="#">
+							<img src="images/h1_logo.png" alt="학교 로고 이미지">
+						</a>
+					</span>
+				</div>
+				<div class="header_top_link">
+					<div class="login_before">
+						<ul>
+							<li><a href="#"><span class="">사이트 맵</span></a></li>
+							<li><a href="#"><span class="">홈</span></a></li>
+							<li><a href="#"><span class="">로그인</span></a></li>
+							<li><a href="#"><span class="">회원가입</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<nav id="main_gnb">
+					<ul>
+						<li><a href="#"><span class="sub">학교소개</span></a>
+								<ul>
+									<li><a href="#">인사말</a></li>
+									<li><a href="#">연혁</a></li>
+									<li><a href="#">찾아오시는 길</a></li>
+								</ul>
+						</li>
+					
+						<li><a href="#"><span class="sub">Depth1</span></a>
+								<ul>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+								</ul>
+						</li>
+				
+						<li><a href="#"><span class="sub">Depth1</span></a>
+								<ul>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+									<li><a href="#">depth2</a></li>
+								</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="aside">
+				<h2>LNB <span>영역</span></h2>
+				<ul>
+					<li>
+						<ul>
+							<li><a href="#"></a><li>
+							<li><a href="#"></a><li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#"></a><li>
+							<li><a href="#"></a><li>
+							<li><a href="#"></a><li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- 본문 -->
+      <div id="content">
+      <section id="main_section">
+        <article class="main_article">
+          <h2 style="text-align: left;">기업 현황 분석</h2>
+          <h5 style="text-align: right;"> <img src="images/s_images/home.png" width="3%" height="2.5%" alt="로고경로" /> > 직무분석 > 기업 현황 분석</h5>
+          <hr>
+        </article>
+      </section>
+      <section id="body_section">
+        <article class="body_article">
+          <fieldset>
+            <legend>기업 정보</legend>
+            <div class="input-group">
+              지역 : 
+              <select class="form-control " id = "search_category" name = "search_category">
+                  <option value="board_title" selected>서울특별시</option>
+                  <option value="board_writer">경기도</option>
+                  <option value="board_regdate">제주도</option>
+              </select> 
+              <span> 기업명 </span>
+            <span class="input-group-btn">
+                    <button class="" onclick="searchFuntion();" type="button">직무 분석 대상 기업 불러오기</button>
+            </span>
+            </div>
+          </fieldset>
+        <div id="CompanyDisplay">
+          <a href="#" onclick="fieldfuntion();"><h3><u>▣ (주)한국기업 본사</u></h3><a>
+          <p>▣ (주)한국기업 지사</p>
+          <p>▣ (주)한국기업 연구소</p>
+        </div>
+          <hr>
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <button class="" onclick="xFuntion();" type="button">임시저장</button>
+          </span>
+          <span class="input-group-btn">
+              <button class="" onclick="xFuntion();" type="button">확정</button>
+          </span>
+          </div>
+          <div id="fieldset_rel">
+            <fieldset>
+              <legend>＊************</legend>
+                <div class="tab_main">
+                  <input id="tab1" type="radio" name="tabs" checked>
+                  <label for="tab1">기업 비전</label>
+                  <input id="tab2" type="radio" name="tabs">
+                  <label for="tab2">경영 이념</label>
+                  <input id="tab3" type="radio" name="tabs">
+                  <label for="tab3">인재상</label>
+                  <input id="tab4" type="radio" name="tabs">
+                  <label for="tab4">주요사업 분야</label>
+                  <input id="tab5" type="radio" name="tabs">
+                  <label for="tab5">주요 연혁</label>
+                  <input id="tab6" type="radio" name="tabs">
+                  <label for="tab6">조직도</label>
+                  <input id="tab7" type="radio" name="tabs">
+                  <label for="tab7">부서별 업무 내용</label>
+                  <hr>
+                  <div class="input-group">
+                      <span class="input-group-btn">
+                          <button class="" onclick="xFuntion();" type="button">추가</button>
+                  </span>
+                  <span class="input-group-btn">
+                      <button class="" onclick="xFuntion();" type="button">수정</button>
+                  </span>
+                  <span class="input-group-btn">
+                      <button class="" onclick="xFuntion();" type="button">삭제</button>
+                  </span>
+                  </div>
+                  <hr>
+                  <section id="content1" class="tab_section">
+                    <p>
+                      <h5>
+                        (주)한국기업은 대전 본사와, 지사, 기업부설연구소를 갖고 있는 우수한 기술력을 인증 받은 하이테크놀로지 전문기업으로서<br/>
+                        MES, IoT, HR 분야의 소프트웨어, 하드웨어, 서비스에 관한 최고의 솔루션을 국내 및 해외 시장에 공급하고 있습니다.<br/>
+                        다양한 산업현장 및 기관, 기업 등 분야에서 고객의 요구에 대한 신속한 서비스와 기술력을 기반으로 최상의 솔루션을 제공합니다.
+                      </h5>
+                    </p>
+                  </section>
+                  <section id="content2" class="tab_section">
+                      <p>
+                        <h5>
+                            ○ GLOBAL<br />
+                            글로벌 일류 기업을 만들고 세계적으로 앞서 나아가는 기업을 첫 번째 비전으로
+                        </h5>
+                      </p>
+                      <p>
+                          <h5>
+                              ○ SUCCESS<br />
+                              글로벌 일류 기업을 만들고 세계적으로 앞서 나아가는 기업을 첫 번째 비전으로
+                          </h5>
+                        </p>
+                  </section>
+                  <section id="content3" class="tab_section">
+                      <p>
+                          <h5>
+                              실패를 두려워하지 않는 젊은이 ...
+                          </h5>
+                      </p>
+                  </section>
+                  <section id="content4" class="tab_section">
+                      <p>
+                          <h5>
+                              SI 사업부
+                          </h5>
+                      </p>
+                      <p>
+                          <h5>
+                              패키지 솔루션 사업부
+                          </h5>
+                      </p>
+                  </section>
+                  <section id="content5" class="tab_section">
+                      <p>
+                          <h5>
+                            ○ 2018
+                            <ul>
+                                <li>한국철강</li>
+                                <li>현대성우오토</li>
+                            </ul>
+                          </h5>
+                      </p>
+                      <p>
+                          <h5>
+                            ○ 2017
+                            <ul>
+                                <li>TGS파이프</li>                                 </li>
+                                <li>현대성우오토</li>
+                            </ul>
+                          </h5>
+                      </p>
+                  </section>
+                  <section id="content6" class="tab_section">
+                      <img src="images/p_images/Organization-chart.png" alt="조직도 이미지">
+                  </section>
+                  <section id="content7" class="tab_section">
+                      <table border="1">
+                        <tr>
+                          <td>번호</td>
+                          <td>부서명</td>
+                          <td>직무</td>
+                          <td>주요업무</td>
+                          <td>설립일자</td>
+                          <td>종료일자</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">2</td>
+                            <td rowspan="2">Si사업부
+                              </td>
+                            <td>SI 영엽</td>
+                            <td>
+                                G2B 정보파악, G2B 입찰활동 참여, 전산장ㅇ비 견적서작성, 전산장비 납품 및 설치, 전산실 컨설팅, 고객사/협력사 관
+                            </td>
+                            <td>2014-10-01</td>
+                            <td>2015-10-01</td>
+                          </tr>
+                          <tr>                              
+                              <td>MES 유지보수</td>
+                              <td>MES 컨설팅, 시스템 장애처리</td>
+                              <td>2014-10-01</td>
+                              <td>2015-10-01</td>
+                          </tr>
+                          <tr>
+                              <td rowspan="2">1</td>
+                              <td rowspan="2">솔루션 사업부</td>
+                              <td>솔루션 영엽</td>
+                              <td>G2B 정보파악, G2B 입찰활동 참여, 전산장ㅇ비 견적서작성, 전산장비 납품 및 설치, 전산실 컨설팅, 고객사/협력사 관리</td>
+                              <td>2014-10-01</td>
+                              <td>2015-10-01</td>
+                            </tr>
+                            <tr>                                
+                                <td>솔루션 유지보수</td>
+                                <td>장애처리, 유지보수, 현행화, 신규구축, 기능고도화</td>
+                                <td>2014-10-01</td>
+                                <td>2015-10-01</td>
+                            </tr>
+                      </table>
+                  </section>
+                </div>
+            </fieldset>
+          </div>
+        </article>
+      </section>
+    </div>
+    <!-- 본문 -->
+
+			<footer id="main_footer">
+				저작권 정보
+			</footer>
+		</div>
+	</body>
+</html>

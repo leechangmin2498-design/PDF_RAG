@@ -1,0 +1,89 @@
+{
+  "name": "AI_TDD_VibeCoding",
+  "description": "AI-assisted TDD + Vibe Coding workflow automation for Cursor",
+  "priority": 10,
+  "rules": [
+    {
+      "pattern": "^(?i)(tdd start|start tdd)",
+      "action": "StartTDD"
+    },
+    {
+      "pattern": "^(?i)(make tests|generate tests|write tests)",
+      "action": "GenerateTests"
+    },
+    {
+      "pattern": "^(?i)(minimal implementation|green|pass tests)",
+      "action": "GreenStage"
+    },
+    {
+      "pattern": "^(?i)(refactor|clean code|improve structure)",
+      "action": "RefactorCode"
+    },
+    {
+      "pattern": "^(?i)(review|check code|audit)",
+      "action": "ReviewCode"
+    },
+    {
+      "pattern": "^(?i)(add feature|next feature|continue)",
+      "action": "NextLoop"
+    }
+  ],
+  "actions": {
+    "StartTDD": {
+      "explanation": "Convert the requirement into TDD-ready test specifications.",
+      "prompt": [
+        "You are an AI TDD assistant. Convert the user's requirements into structured TDD test specifications.",
+        "Break down the feature into testable units.",
+        "Include edge cases, failure cases, and behavior-driven scenarios.",
+        "Output format: TEST SPEC + PRIORITY (MoSCoW)."
+      ]
+    },
+    "GenerateTests": {
+      "explanation": "Generate failing test cases using the specification.",
+      "prompt": [
+        "Generate failing tests according to the test specifications.",
+        "Tests MUST fail initially. Do not write implementation.",
+        "Follow the testing framework of the existing project.",
+        "Ensure full coverage including edge cases."
+      ]
+    },
+    "GreenStage": {
+      "explanation": "Write minimum code to pass all tests.",
+      "prompt": [
+        "Write ONLY the minimal implementation required to make all current tests pass.",
+        "Do NOT over-engineer.",
+        "No refactoring at this stage."
+      ]
+    },
+    "RefactorCode": {
+      "explanation": "Refactor the implementation while keeping tests green.",
+      "prompt": [
+        "Refactor the existing implementation.",
+        "Improve structure, naming, modularization, reducing duplication, and apply SOLID where useful.",
+        "All existing tests must remain green.",
+        "If necessary, generate improved helper methods."
+      ]
+    },
+    "ReviewCode": {
+      "explanation": "AI code review for quality improvement.",
+      "prompt": [
+        "Perform a code review focusing on:",
+        "- duplicated logic",
+        "- naming issues",
+        "- readability",
+        "- missing edge cases",
+        "- performance bottlenecks",
+        "- security vulnerabilities",
+        "Then propose recommended improvements."
+      ]
+    },
+    "NextLoop": {
+      "explanation": "Repeat TDD cycle for the next feature.",
+      "prompt": [
+        "Identify the next feature from the project context.",
+        "Generate test specifications (RED).",
+        "Then ask the user whether to generate failing tests now."
+      ]
+    }
+  }
+}

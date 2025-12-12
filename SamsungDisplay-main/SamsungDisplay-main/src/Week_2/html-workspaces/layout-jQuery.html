@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.container{
+				border: 1px solid red;
+				width: 940px;
+				margin: 0px auto;
+				padding: 20px;
+			}
+			
+			header{
+				margin-bottom: 20px;
+				padding: 20px;
+				border: 1px solid red;
+			}
+			
+			#sidebar{
+				padding: 20px;
+				border: 1px solid #bcbcbc;
+				width: 260px;
+				margin-bottom: 20px;
+				float: left;
+			}
+			
+			#sidebar > ul > li{
+				font-size: 20pt;
+				color: aqua;
+			}
+			
+			.content{
+				width: 580px;
+				padding: 20px;
+				margin-bottom: 20px;
+				border: 1px solid #bcbcbc;
+				float: right;
+			}
+			
+			footer{
+				clear: both;
+				padding: 20px;
+				border: 1px solid #bcbcbc;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>상단 헤더 영역</h1>
+			</header>
+			<div id="sidebar">
+				<h2>좌측 메뉴 영역</h2>
+				<ul>
+					<li><a href="#">홈</a><li>
+					<li><a href="#">학교소개</a><li>
+					<li><a href="#">Contact Us</a><li>
+				</ul>
+			</div>
+			<div class="content">
+				<section>
+					<h2>본문</h2>
+					<p>
+						첫 번째 단락 본문글입니다.
+					</p>
+					<p>
+						두 번째 단락 본문글입니다.
+					</p>
+					<br />
+					<form id="mailform" action="" method="post">
+						메일발송: <input type="text" id="txtemail" placeholder="메일주소입력" />
+						<input type="submit" id="btnsend" value="전송" />
+					</form>
+				</section>
+			</div>
+			<footer>
+				<p>
+					바닥글
+				</p>
+			</footer>
+		</div>
+    <script src="jquery-3.3.1.js" type="text/javascript"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnsend").click(function () {
+                if ($("#txtemail").val() == "") {
+                    alert("메일주소를 입력해주세요.");
+                    $("#txtemail").focus();
+                    return false;
+                }
+
+            });
+            
+        });
+    </script>
+
+
+	</body>
+</html>
